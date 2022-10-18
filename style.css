@@ -1,0 +1,135 @@
+ body{
+background-color: whitesmoke;
+} 
+
+.line {
+    content: "";
+    height: 0.1875rem;
+    width: 4%;
+    margin: 0.2rem 0 0.8rem 0;
+    background: #cc0000;
+}
+
+.menu{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+figure{
+    width: 45%;
+    height: 45%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+figcaption {
+    border: 1px solid rgba(1, 1, 1, 0.095);
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+    height: 2.3rem;
+    margin: 0 0 1.7rem 0;
+    padding: 0.4rem 0;
+    font-size: clamp(1rem,3vw,3rem);
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 0 0 10px 10px ;
+}
+
+
+figure img{
+    width: 100%;
+    height: auto;
+    margin:0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Tablet */
+
+@media only screen and (min-width:440px) and (max-width:950px){
+    .menu {
+        gap:1%;
+    }
+    figcaption {
+        height: 2.85rem;
+        padding: 0.9rem 0;
+        
+    }
+    figure{
+        width: 24%;
+        height: 30%;
+    }
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width:951px){
+    .menu{
+        display:grid;
+        gap:   1%;
+        grid-template: 
+            "a a a a a a b b b c c c" 
+            "a a a a a a d d d e e e" 
+            "f f f f g g g g h h h h" / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    }
+    figure:nth-child(1){
+         grid-area: a;   
+    }
+    figure:nth-child(2) {
+        grid-area: b;   
+    }
+   figure:nth-child(3) {
+        grid-area: c;   
+    }
+    figure:nth-child(4) {
+        grid-area: d;   
+    }
+    figure:nth-child(5) {
+        grid-area: e;   
+    }
+    figure:nth-child(6) {
+        grid-area: f;   
+    }
+    figure:nth-child(7) {
+        grid-area: g;   
+    }
+    figure:nth-child(8) {
+        grid-area: h;   
+    }
+
+    /* Edits */
+    figure{
+        width: auto;
+        height: auto;
+        padding:0;
+        -webkit-transition: all 0.3s ease-in-out;
+    }
+
+    figure:hover{
+        -webkit-transform: translate(0,-5px);
+    }
+    
+    figcaption{
+        width: 100%;
+        height: 20%;
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.126);
+        margin:0;
+    }
+
+    figure img{
+        width: 100%;
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.116);
+    }
+
+    
+}  
